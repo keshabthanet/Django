@@ -1,0 +1,29 @@
+<h1>This is the first page of the template</h1>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<br>
+{% comment %} <a href="{% url 'about' %}">About</a> {% endcomment %}
+<br>
+<div class="container">
+<form action="{% url 'password' %}"">
+<h1>This is the form</h1>
+<select name="length">
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+</select><br>
+<input type="checkbox" name='uppercase'/>Upper case
+<br>
+<input type="checkbox" name='numbers'/>Numbers
+<br>
+<input type="checkbox" name='specials'/>Special Characters
+<br>
+<input type="submit" value="Generate Password" class="btn btn-primary"/><br>
+
+</form>
+</div>
