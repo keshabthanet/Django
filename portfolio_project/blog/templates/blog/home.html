@@ -1,0 +1,16 @@
+<h1>This is the home of blog</h1>
+{% for blog in Blog %}
+<h2>{{blog.title}}</h2>
+<h3>{{blog.date}}</h3>
+<br>
+<h2>{{blog.description}}</h2>
+<br>
+{% if blog.image %}
+
+<img src="{{ blog.image.url }}" height=500 weidth=400/>
+<br>
+{% endif %}
+
+<br>
+
+{% endfor %}

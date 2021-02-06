@@ -1,0 +1,14 @@
+<h1>This is the home page</h1>
+{% for object in profile %}
+<h2>{{object.title}}</h2>
+<br>
+<br>
+
+<p>{{object.description}}</p>
+<br>
+{% if  object.url %}
+{% comment %} <img src="{{ object.image.url}}"/> {% endcomment %}
+<a href="{{ object.url }}" target="_blank">Youtube</a>
+{% endif %}
+
+{% endfor %}
