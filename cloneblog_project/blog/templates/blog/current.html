@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+This is current home
+{% for posts in post %}
+<ul><a href="{% url 'viewpost' posts.id %}">
+
+<h3><li>{{posts.title}}
+</li></h3></a>
+{{posts.created_date}}<br>
+{{posts.auther}}
+</ul>
+
+{% endfor %}
+
+{% endblock  %}
+ 

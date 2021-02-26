@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{%  block content %}
+{{error}}
+
+ {% if user.is_authenticated %}
+<form method="POST">
+{% csrf_token %}
+{{postform.as_p}}
+<button type="submit">Save</button>
+
+</form>
+</form>
+<form method="POST" action="{% url 'deletepost' post.id %}">
+{% csrf_token %}
+<button type="submit">Delete</button>
+</form>
+{% else %}
+{{post.title}}<br>
+{{post.text}}<br>
+Date:{{post.created_date}}<br>
+Auther:{{post.auther}}
+{% endif %}
+{% endblock %}

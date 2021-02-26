@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search app</title>
+</head>
+<body>
+<div class="container">
+<h2>This is the seach app</h2>
+<form>
+<input type="text" name="search">
+<input type="submit" name="submit" value="Search">
+</form>
+ </div> 
+<br> 
+{% if name %}
+{{name}}  
+<form method="POST">
+{% csrf_token %}
+<input type="submit" name="submit" value="Add">
+</form>
+{% endif %}
+</body>
+</html>

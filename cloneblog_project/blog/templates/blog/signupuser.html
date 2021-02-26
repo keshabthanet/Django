@@ -1,0 +1,9 @@
+{% comment %} {% extends 'blog/base.html' %}
+This is signup
+{% block content %}
+<form method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit">Singup</button>
+</form>
+{% endblock  %} {% endcomment %}

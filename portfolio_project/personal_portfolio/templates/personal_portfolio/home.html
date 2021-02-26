@@ -1,4 +1,9 @@
 <h1>This is the home page</h1>
+<a href="{% url 'blog:index' %}" target="_blank">Blog</a>
+
+{% load static %}
+<img src="{% static 'personal_portfolio/IMG_20200207_152641-01.jpeg' %}"height=100 weight=200/>
+<a href="{% static 'personal_portfolio/cv.pdf' %}">cv</a>
 {% for object in profile %}
 <h2>{{object.title}}</h2>
 <br>

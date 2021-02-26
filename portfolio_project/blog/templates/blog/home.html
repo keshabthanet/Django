@@ -1,6 +1,12 @@
 <h1>This is the home of blog</h1>
+
 {% for blog in Blog %}
-<h2>{{blog.title}}</h2>
+<a href="{% url 'blog:detail' blog.id %}">
+      <h2>{{ blog.title }}</h2>
+    </a>
+
+
+{% comment %} <h2><a href="">{{  blog.title }}</a></h2> {% endcomment %}
 <h3>{{blog.date}}</h3>
 <br>
 <h2>{{blog.description}}</h2>
